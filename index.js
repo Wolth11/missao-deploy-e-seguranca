@@ -1,8 +1,9 @@
+require("dotenv").config()
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 const app = express();
 const lista = ["JAVA", "KOTLIN", "ANDROID"]
-const dbUrl = "mongodb+srv://admin:MhEfvW3C.wcTanK@cluster0.lygekv7.mongodb.net"
+const dbUrl = process.env.DATABASE_URL
 const dbName = "mongodb-intro-e-imprementacao"
 
 async function main() {
